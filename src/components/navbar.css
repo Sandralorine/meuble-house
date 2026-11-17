@@ -1,0 +1,350 @@
+/* Navbar */
+.navbar {
+  background: white;
+  padding: 23px 15px;
+  box-shadow: 0 2px 10px rgba(92, 79, 71, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Conteneur pour le logo et la barre de recherche (à gauche) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Conteneur pour les liens et les icônes (à droite) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--brown-dark);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 26px;
+  height: 26px;
+  color: var(--taupe);
+}
+
+.logo-text {
+  color: var(--brown-dark);
+}
+
+/* Barre de recherche - Desktop */
+.search-form {
+  flex: 0.7;
+  max-width: 425px;
+  margin-left: 45px; /* Rapproche la barre de recherche du logo */
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 2px solid var(--beige-medium);
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  color: var(--beige-dark);
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--brown-dark);
+}
+
+.search-input::placeholder {
+  color: var(--beige-dark);
+  font-style: italic;
+}
+
+.search-btn {
+  padding: 10px 15px;
+  background: var(--taupe);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.search-btn:hover {
+  background: var(--brown-soft);
+}
+
+/* Liens et icônes à droite */
+.navbar-menu {
+  display: flex;
+  gap: 30px;
+  margin-left: 420px; /* Supprime la marge à droite */
+}
+
+
+.nav-link {
+  text-decoration: none;
+  color: var(--brown-dark);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--taupe);
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-left: auto; /* Déplace les icônes et le bouton de menu à droite */
+}
+
+
+.nav-icon {
+  position: relative;
+  color: var(--brown-dark);
+  transition: color 0.3s;
+  
+}
+
+.nav-icon:hover {
+  color: var(--taupe);
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--taupe);
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Bouton menu mobile */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--brown-dark);
+  padding: 5px;
+
+}
+
+/* Menu Mobile */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  padding: 20px;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(92, 79, 71, 0.1);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  z-index: 100;
+}
+
+.mobile-search-form {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--brown-dark);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.mobile-nav-link:hover {
+  color: var(--taupe);
+}
+
+.mobile-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.mobile-divider {
+  height: 1px;
+  background: var(--beige-medium);
+  margin: 10px 0;
+}
+
+/* Icône de cœur */
+.like-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.like-icon .icon {
+  width: 22px;
+  height: 22px;
+  color: var(--brown-dark);
+  transition: color 0.3s;
+  
+}
+
+.like-icon .icon.liked {
+  color: red;
+}
+
+.like-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--taupe);
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Overlay du modal */
+.contact-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Conteneur du modal */
+.contact-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton pour fermer le modal */
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Formulaire */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.submit-btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-form {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}
